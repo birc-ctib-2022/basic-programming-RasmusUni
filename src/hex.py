@@ -17,16 +17,17 @@ match command:
         y=[]
         for a in x:
             y.append(hex(ord(a)))
-
+  
         encoding="".join(y)
         print(encoding)
 
     case "decode":
         # Implement the decoding here
         decoding = ""
-        list3 = x.split("0x")
+        y = x.split("0x")
         list4=[]
-        for a in list3[1:]:
+
+        for a in y[1:]:
             a=int(a, base=16)
             list4.append(chr(a))
         
