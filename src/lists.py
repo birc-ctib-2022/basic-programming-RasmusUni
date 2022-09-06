@@ -1,4 +1,5 @@
 import sys
+from tkinter import Y
 
 # This reads all of stdin and converts it into a list of integers.
 # This *only* works if there are no non-integers in the input.
@@ -42,7 +43,10 @@ if len(sys.argv) < 2:
 match sys.argv[1]:
     case "mean":
         # put your solution to the first exercise here
-        mean = "mean of x"
+        s=0
+        for a in x:
+            s+=a
+        mean = s/len(x)
         print(mean)
 
     case "times":
