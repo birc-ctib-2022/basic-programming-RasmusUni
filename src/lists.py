@@ -40,6 +40,7 @@ if len(sys.argv) < 2:
     print("Incorrect number of arguments.", file=sys.stderr)
     sys.exit(1)
 
+
 match sys.argv[1]:
     case "mean":
         # put your solution to the first exercise here
@@ -50,13 +51,21 @@ match sys.argv[1]:
         print(mean)
 
     case "times":
-        # Put your solution to the second exercise here
+        # Put your solution to the second exercise here  
         times_three = []
+        for b in x:
+            b=b*3
+            times_three.append(b)
+
         print_list(times_three)
 
     case "even":
         # Put your solution to the third exercise here
         even = []
+        for c in x:
+            if c % 2 == 0:
+                even.append(c)
+
         print_list(even)
 
     case _:
