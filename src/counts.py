@@ -10,7 +10,7 @@ count = {}
 
 for c in x:
     if c not in count:
-        count[c]==1
+        count[c]=1
     elif c in count:
         count[c]+=1
 
