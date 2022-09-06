@@ -14,9 +14,23 @@ match command:
     case "encode":
         # Implement the encoding here
         encoding = ""
+        y=[]
+        for a in x:
+            y.append(hex(ord(a)))
+  
+        encoding="".join(y)
         print(encoding)
 
     case "decode":
         # Implement the decoding here
         decoding = ""
+        y = x.split("0x")
+        list4=[]
+
+        for a in y[1:]:
+            a=int(a, base=16)
+            list4.append(chr(a))
+        
+        decoding="".join(list4)
+
         print(decoding)
